@@ -1,25 +1,46 @@
-# UK-IT
+# UK-IT Projects
 
-## Mono Report: AI-Powered IT Helpdesk Assistant
+A community monorepo where anyone can **submit an IT project idea** and others can **easily join and build it together**.
 
-### Idea Summary
-Develop an AI-powered helpdesk assistant for UK-IT to answer common student and staff IT questions (password reset, Wi-Fi setup, software access, VPN, and account issues) through a single chat interface.
+Every project lives in its own folder under [`projects/`](./projects) — holding both the idea proposal *and* the actual code. Browse the projects, find one you like, and jump in.
 
-### Problem
-Many repetitive support requests consume UK-IT time and delay responses for complex technical issues.
+---
 
-### Proposed Solution
-- Build a chatbot connected to a curated UK-IT knowledge base.
-- Provide guided troubleshooting steps before raising a human ticket.
-- Escalate unresolved requests automatically with collected diagnostics.
+## 🚀 Quick start
 
-### Expected Benefits
-- Faster first response times for users.
-- Reduced repetitive workload for IT support staff.
-- Better ticket quality and shorter resolution time for complex issues.
+| I want to... | Do this |
+|---|---|
+| **Submit a new idea** | [Open a "New project" issue](../../issues/new?template=new-project.yml), or copy [`templates/project-template/`](./templates/project-template) into `projects/your-idea/` and open a PR. See [CONTRIBUTING](./CONTRIBUTING.md). |
+| **Join an existing project** | Find it in [`projects/`](./projects), read its `README.md`, then [open a "Join project" issue](../../issues/new?template=join-project.yml) or add yourself to its `CONTRIBUTORS.md` via PR. |
+| **Browse all projects** | See the [project index](./projects/README.md). |
 
-### Basic Implementation Plan
-1. Collect and structure existing UK-IT FAQs and support guides.
-2. Build an MVP chatbot with escalation to current ticketing process.
-3. Pilot with a limited user group and track response/resolution metrics.
-4. Improve knowledge coverage and roll out to wider university users.
+---
+
+## 📂 Repository structure
+
+```
+UK-IT/
+├── README.md                      # You are here — the hub
+├── CONTRIBUTING.md                # How to submit and join projects
+├── CODE_OF_CONDUCT.md             # Community ground rules
+├── projects/                      # Every project lives here
+│   ├── README.md                  # Index of all projects
+│   └── <project-name>/            # One folder per project
+│       ├── README.md              # Idea, status, how to join
+│       ├── CONTRIBUTORS.md        # Who's on the team
+│       └── src/                   # The actual code/work
+├── templates/
+│   └── project-template/          # Copy this to start a new project
+└── .github/
+    ├── ISSUE_TEMPLATE/            # "New project" & "Join project" forms
+    └── PULL_REQUEST_TEMPLATE.md
+```
+
+## 💡 How it works
+
+1. **Submit** — Propose an idea (issue or PR). Each idea becomes a folder in `projects/`.
+2. **Recruit** — Others discover your project in the index and ask to join.
+3. **Build** — Teams collaborate inside their project folder. Code, docs, everything in one place.
+4. **Ship** — Track progress in the project's `README.md` status.
+
+New here? Start with **[CONTRIBUTING.md](./CONTRIBUTING.md)**.

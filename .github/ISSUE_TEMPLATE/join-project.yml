@@ -1,0 +1,39 @@
+name: "🤝 Join a project"
+description: "Ask to join an existing project and start contributing."
+title: "[Join] <project name>"
+labels: ["join-project"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Want to help build something? Tell us which project and what you'd like to do.
+        You can also just open a PR adding yourself to that project's `CONTRIBUTORS.md`.
+  - type: input
+    id: project
+    attributes:
+      label: Which project?
+      description: The folder name under projects/
+      placeholder: ai-helpdesk-assistant
+    validations:
+      required: true
+  - type: input
+    id: handle
+    attributes:
+      label: Your name / GitHub handle
+      placeholder: "@octocat"
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: How would you like to help?
+      description: Skills, role, or what you'd like to work on.
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct.
+          required: true
