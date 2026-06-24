@@ -1,0 +1,57 @@
+name: "💡 New project idea"
+description: "Propose a new IT project for others to join and build."
+title: "[Project] <your idea name>"
+labels: ["new-project", "idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing an idea! Fill this in and we'll scaffold a folder for it under `projects/`.
+        Prefer to do it yourself? Copy `templates/project-template/` into `projects/your-idea/` and open a PR instead.
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+      description: "Short, kebab-case friendly, e.g. campus-wifi-map"
+      placeholder: ai-helpdesk-assistant
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Idea summary
+      description: One or two sentences — what is it and who is it for?
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What pain point or need does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How would you approach it?
+    validations:
+      required: true
+  - type: textarea
+    id: looking-for
+    attributes:
+      label: Looking for
+      description: What skills/roles would help build this?
+      placeholder: |
+        - Backend developer
+        - Designer
+        - Domain expert
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct.
+          required: true
